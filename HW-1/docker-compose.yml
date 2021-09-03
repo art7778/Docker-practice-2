@@ -2,8 +2,8 @@ version: '3.3'
 services:
   mongo_db:
     image: mongo:latest
-#    volumes:
-#      - post_db:/data/db
+    volumes:
+      - post_db:/data/db
     networks:
       backend:
         aliases:
@@ -28,8 +28,8 @@ services:
     networks:
       - backend
       - front
-#volumes:
-#  post_db:
+volumes:
+  post_db:
 
 networks:
   front:
